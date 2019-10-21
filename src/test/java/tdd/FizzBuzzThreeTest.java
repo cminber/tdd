@@ -9,14 +9,14 @@ import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
-public class FizzBuzzTwoTest {
+public class FizzBuzzThreeTest {
 
     private int number;
-    private String result;
+    private String expected;
 
-    public FizzBuzzTwoTest(int number, String result) {
+    public FizzBuzzThreeTest(int number, String expected) {
         this.number = number;
-        this.result = result;
+        this.expected = expected;
     }
 
     @Parameterized.Parameters
@@ -34,9 +34,6 @@ public class FizzBuzzTwoTest {
 
     @Test
     public void should_return_string_given_interger() {
-        number = 1;
-        result = FizzBuzzTwo.of(number);
-        assertEquals("1", result);
+        assertEquals(expected, FizzBuzzThree.of(number));
     }
-
 }
